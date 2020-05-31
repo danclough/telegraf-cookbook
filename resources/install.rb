@@ -56,6 +56,8 @@ action :create do
         telegraf_arch = 'armhf'
       when 'armv5l'
         telegraf_arch = 'armel'
+      when 'aarch64'
+        telegraf_arch = 'arm64'
       else
         telegraf_arch = 'amd64'
         Chef::Log.warn('Arch not detected properly, falling back to amd64')
